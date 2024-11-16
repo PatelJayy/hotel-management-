@@ -1,0 +1,4 @@
+pymongo
+flask
+requests
+flask_restful
