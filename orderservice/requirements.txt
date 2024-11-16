@@ -1,0 +1,6 @@
+pymongo
+flask
+requests
+flask_restful
+urllib3==1.26.6
+# ...other dependencies...
