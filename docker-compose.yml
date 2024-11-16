@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+  APIgateway:
+    image: apigateway
+    networks:
+      - map_inno_default
+    ports:
+      - 8000:8000
+    container_name: APIgateway
+  
+  auth:
+    image: auth
+    networks:
+      - map_inno_default
+    ports:
+      - 3003:3003
+    container_name: auth
+
+  item:
+    image: item
+    networks:
+      - map_inno_default
+    ports:
+      - 3001:3001
+    container_name: item
+
+  order:
+    image: order
+    networks:
+      - map_inno_default
+    ports:
+      - 3002:3002
+    container_name: order
+
+
+volumes:
+  mongo-data:
+networks:
+  map_inno_default:
+    driver: bridge
